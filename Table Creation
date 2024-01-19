@@ -1,0 +1,6 @@
+CREATE TABLE results(
+  id varchar2(10) PRIMARY KEY NOT NULL, match_date date, sport_id varchar2(10),
+   team_1_id varchar2(10), team_2_id varchar2(10), team_1_score int,
+   team_2_score int, team_status  varchar2(50), FOREIGN KEY (sport_id) REFERENCES sports(sport_id),
+   FOREIGN KEY (team_1_id) REFERENCES teams(team_id),
+  FOREIGN KEY (team_2_id) REFERENCES teams(team_id));
