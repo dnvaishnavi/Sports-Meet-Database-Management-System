@@ -1,0 +1,68 @@
+Result Table:
+INSERT INTO results (id, match_date, sport_id, team_1_id, team_2_id, team_1_score, team_2_score, team_status)
+VALUES ('R1', TO_DATE('2023-01-01', 'YYYY-MM-DD'), 'S1', 'T1', 'T2', 3, 2, 'Team 1 won');
+
+
+INSERT INTO results (id, match_date, sport_id, team_1_id, team_2_id, team_1_score, team_2_score, team_status)
+VALUES ('R2', TO_DATE('2023-01-02', 'YYYY-MM-DD'), 'S2', 'T3', 'T4', 1, 1, 'Match drawn');
+
+INSERT INTO results (id, match_date, sport_id, team_1_id, team_2_id, team_1_score, team_2_score, team_status)
+VALUES ('R3', TO_DATE('2023-01-03', 'YYYY-MM-DD'), 'S3', 'T5', 'T6', 2, 3, 'Team 2 won');
+
+INSERT INTO results (id, match_date, sport_id, team_1_id, team_2_id, team_1_score, team_2_score, team_status)
+VALUES ('R4', TO_DATE('2023-01-04', 'YYYY-MM-DD'), 'S4', 'T7', 'T8', 4, 1, 'Team 1 won');
+
+INSERT INTO results (id, match_date, sport_id, team_1_id, team_2_id, team_1_score, team_2_score, team_status)
+VALUES ('R5', TO_DATE('2023-01-05', 'YYYY-MM-DD'), 'S5', 'T9', 'T10', 2, 3, 'Team 2' );
+
+Sports table:
+INSERT INTO sports (sport_id, sport_name, sport_type, no_of_teams)
+VALUES ('S1', 'Football', 'G', 20);
+
+INSERT INTO sports (sport_id, sport_name, sport_type, no_of_teams)
+VALUES ('S2', 'Basketball', 'G', 15);
+
+INSERT INTO sports (sport_id, sport_name, sport_type, no_of_teams)
+VALUES ('S3', 'Tennis', 'I', 2);
+
+INSERT INTO sports (sport_id, sport_name, sport_type, no_of_teams)
+VALUES ('S4', 'Baseball', 'G', 10);
+
+INSERT INTO sports (sport_id, sport_name, sport_type, no_of_teams)
+VALUES ('S5', 'Swimming', 'I', 2);
+
+Team Table:
+INSERT INTO teams (team_id, team_name, college, place, coach, sport_id)
+VALUES ('T1', 'Team A', 'vnr', 'hyderabad', 'C-101', 'S1');
+
+INSERT INTO teams (team_id, team_name, college, place, coach, sport_id)
+VALUES ('T2', 'Team B', 'grec', 'hyderabad', 'C-112', 'S2');
+
+INSERT INTO teams (team_id, team_name, college, place, coach, sport_id)
+VALUES ('T3', 'Team C', 'deccan college', 'hyderabad', 'C-54', 'S3');
+
+INSERT INTO teams (team_id, team_name, college, place, coach, sport_id)
+VALUES ('T4', 'Team D', 'tkr college', 'warangal', 'C-903', 'S4');
+
+INSERT INTO teams (team_id, team_name, college, place, coach, sport_id)
+VALUES ('T5', 'Team E', 'licet', 'chennai', 'C-123', 'S5');
+
+Player table:
+INSERT INTO player (player_id, player_name, age, gender, area, district, pincode, contact, mail, team_id)
+VALUES (1, 'smith', 18, 'M', 'kukatpally', 'medchal', 12345, 9876543210, 'smith123@email.com', 'T1');
+INSERT INTO player (player_id, player_name, age, gender, area, district, pincode, contact, mail, team_id)
+VALUES (2, 'chloe', 20, 'F', 'pangra', 'nizamabad', 54321, 9876543211, 'chloee@email.com', 'T2');
+INSERT INTO player (player_id, player_name, age, gender, area, district, pincode, contact, mail, team_id)
+VALUES (3, 'adam', 22, 'M', 'bachupally', 'medchal', 67890, 9876543212, 'adam52@email.com', 'T3');
+INSERT INTO player (player_id, player_name, age, gender, area, district, pincode, contact, mail, team_id)
+VALUES (4, 'anna', 19, 'F', 'devi colony', 'bidar', 98765, 9876543213, 'ana.p@email.com', 'T4');
+INSERT INTO player (player_id, player_name, age, gender, area, district, pincode, contact, mail, team_id)
+VALUES (5, 'clark', 21, 'M', 'kazipet', 'warangal', 23456, 9876543214, 'clark.c@email.com', 'T5');
+INSERT INTO player (player_id, player_name, age, gender, area, district, pincode, contact, mail, team_id)
+VALUES (6, 'alya', 17, 'F', 'alatur', 'palakkad', 76543, 9876543215, 'alya.n@email.com', 'T1');
+INSERT INTO player (player_id, player_name, age, gender, area, district, pincode, contact, mail, team_id)
+VALUES (7, 'scott', 20, 'M', 'miyapur', 'hyderabad', 87654, 9876543216, 'scotdb@email.com', 'T2');
+INSERT INTO player (player_id, player_name, age, gender, area, district, pincode, contact, mail, team_id)
+VALUES (8, 'rose', 18, 'F', 'ranipet', 'vellore', 34567, 9876543217, 'rose.y@email.com', 'T3');
+INSERT INTO player (player_id, player_name, age, gender, area, district, pincode, contact, mail, team_id)
+VALUES (9, 'milo', 22, 'M', 'bachupally', 'medchal', 45678, 9876543218, 'milo.z@email.com', 'T4');
