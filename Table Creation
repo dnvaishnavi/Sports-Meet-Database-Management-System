@@ -1,6 +1,26 @@
+Results Table:
 CREATE TABLE results(
   id varchar2(10) PRIMARY KEY NOT NULL, match_date date, sport_id varchar2(10),
    team_1_id varchar2(10), team_2_id varchar2(10), team_1_score int,
    team_2_score int, team_status  varchar2(50), FOREIGN KEY (sport_id) REFERENCES sports(sport_id),
    FOREIGN KEY (team_1_id) REFERENCES teams(team_id),
   FOREIGN KEY (team_2_id) REFERENCES teams(team_id));
+
+Sports table:
+CREATE TABLE sports(
+  sport_id varchar2(5) PRIMARY KEY NOT NULL, sport_name varchar2(20),
+  sport_type varchar2(4) check (sport_type in ('I','G')), no_of_teams int);
+
+Teams table:
+CREATE TABLE teams(
+    team_id varchar2(5) PRIMARY KEY NOT NULL, team_name varchar2(30), college varchar2(30),
+    place varchar2(30), coach varchar2(30),
+    sport_id varchar2(10), FOREIGN KEY (sport_id) REFERENCES sports(sport_id)
+);
+
+Player Table:
+CREATE TABLE player(
+ player_id  int PRIMARY KEY NOT NULL, player_name varchar2(30),
+ age int, gender varchar2(5), area varchar2(30), district varchar2(30), pincode int,
+ contact int, mail varchar2(30), team_id varchar2(10),
+ FOREIGN KEY (team_id) REFERENCES teams(team_id));
